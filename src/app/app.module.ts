@@ -8,6 +8,7 @@ import { AppComponent } from "./app.component";
 import { HelloComponent } from "./hello.component";
 import { LeaderboardComponent } from "./leaderboard/leaderboard.component";
 import { LeaderboardService } from "./leaderboard.service";
+import { LeaderboardResolver } from "./leaderboard.resolver";
 
 @NgModule({
   imports: [
@@ -15,7 +16,13 @@ import { LeaderboardService } from "./leaderboard.service";
     FormsModule,
     HttpClientModule,
     RouterModule.forRoot([
-      { path: "", component: LeaderboardComponent }
+      {
+        path: "",
+        component: LeaderboardComponent,
+        resolve: {
+          leaderboard: LeaderboardResolver
+        }
+      }
       //      { path: "products/:productId", component: ProductDetailsComponent }
     ])
   ],

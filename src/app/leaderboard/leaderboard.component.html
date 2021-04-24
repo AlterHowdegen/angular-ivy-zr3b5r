@@ -3,12 +3,18 @@
 </p>
 
 <table>
-  <tr *ngFor="let entry of leaderboard">
+  <tr *ngFor="let entry of leaderboard.message; let i = index">
+    <td>{{ i + 1 | number: "1." }}</td>
     <td>{{ entry.name }}</td>
     <td>{{ entry.score }}</td>
     <td>{{ entry.round }} - {{ entry.stage }}</td>
     <td>{{ entry.ship }}</td>
-    <td>{{ entry.time }}</td>
-    <td>{{ entry.timestamp }}</td>
+    <td [ngSwitch]="entry.ship">
+      <span *ngSwitchCase="0">Wivern</span>
+      <span *ngSwitchCase="1">Hydra</span>
+      <span *ngSwitchCase="2">Greif</span>
+    </td>
+    <td>{{ (entry.time - 3600) * 1000 | date:'HH:mm:ss'}}</td>
+    <td>{{ entry.timestamp * 1000 | date:'shortDate'}}</td>
   </tr>
 </table>

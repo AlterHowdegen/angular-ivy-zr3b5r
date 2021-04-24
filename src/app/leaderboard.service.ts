@@ -9,7 +9,10 @@ import { catchError, map } from "rxjs/operators";
 
 // Set the http options
 const httpOptions = {
-  headers: new HttpHeaders({ "Content-Type": "application/json", "Authorization": "c31z" })
+  headers: new HttpHeaders({
+    "Content-Type": "application/json",
+    Authorization: "c31z"
+  })
 };
 
 @Injectable({
@@ -54,6 +57,7 @@ export class LeaderboardService {
    */
   public getListOfGroup(url: string): Observable<any> {
     // Call the http GET
+    console.log(this.extractData);
     return this.http.get(url, httpOptions).pipe(
       map(this.extractData),
       catchError(this.handleError)
