@@ -1,3 +1,14 @@
 <p>
-  leaderboard works!
+  Schildmaid Leaderboard
 </p>
+
+<table>
+  <tr *ngFor="let entry of leaderboard">
+    <td>{{ entry.name }}</td>
+    <td>{{ entry.score }}</td>
+    <td>{{ entry.round }} - {{ entry.stage }}</td>
+    <td>{{ entry.ship }}</td>
+    <td>{{ entry.time }}</td>
+    <td>{{ entry.timestamp }}</td>
+  </tr>
+</table>
