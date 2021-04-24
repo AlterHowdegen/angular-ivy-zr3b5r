@@ -4,9 +4,9 @@
 
 <table>
   <tr *ngFor="let entry of leaderboard.message; let i = index">
-    <td>{{ i + 1 | number: "1." }}</td>
+    <td>{{ i + 1 | number }}</td>
     <td>{{ entry.name }}</td>
-    <td>{{ entry.score }}</td>
+    <td>{{ entry.score | number }}</td>
     <td>{{ entry.round }} - {{ entry.stage }}</td>
     <td>{{ entry.ship }}</td>
     <td [ngSwitch]="entry.ship">
