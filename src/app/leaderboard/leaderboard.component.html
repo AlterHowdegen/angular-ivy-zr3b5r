@@ -1,5 +1,5 @@
 <p>
-  Schildmaid Leaderboard
+  Leaderboard
 </p>
 
 <table>
@@ -8,7 +8,6 @@
     <td>{{ entry.name }}</td>
     <td>{{ entry.score | number }}</td>
     <td>{{ entry.round }} - {{ entry.stage }}</td>
-    <td>{{ entry.ship }}</td>
     <td [ngSwitch]="entry.ship">
       <span *ngSwitchCase="0">Wivern</span>
       <span *ngSwitchCase="1">Hydra</span>
