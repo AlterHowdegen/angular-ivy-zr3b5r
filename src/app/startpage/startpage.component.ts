@@ -8,7 +8,7 @@ declare var require: any;
   styleUrls: ["./startpage.component.css"]
 })
 export class StartpageComponent implements OnInit {
-  public itchBadge = require("./assets/itchBadgeColor.png");
+  //public itchBadge = require("./assets/itchBadgeColor.png");
 
   constructor() {}
 
