@@ -11,6 +11,7 @@ import { LeaderboardComponent } from "./leaderboard/leaderboard.component";
 import { LeaderboardService } from "./leaderboard.service";
 import { LeaderboardResolver } from "./leaderboard.resolver";
 import { StartpageComponent } from "./startpage/startpage.component";
+import { AboutComponent } from "./about/about.component";
 
 @NgModule({
   imports: [
@@ -27,6 +28,10 @@ import { StartpageComponent } from "./startpage/startpage.component";
         }
       },
       {
+        path: "about",
+        component: AboutComponent
+      },
+      {
         path: "leaderboard",
         component: LeaderboardComponent,
         resolve: {
@@ -40,7 +45,8 @@ import { StartpageComponent } from "./startpage/startpage.component";
     AppComponent,
     HelloComponent,
     LeaderboardComponent,
-    StartpageComponent
+    StartpageComponent,
+    AboutComponent
   ],
   bootstrap: [AppComponent],
   providers: [LeaderboardService]
