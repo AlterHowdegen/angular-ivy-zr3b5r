@@ -6,7 +6,6 @@ import { HttpClientModule } from "@angular/common/http";
 import { NgxTwitterTimelineModule } from "ngx-twitter-timeline";
 
 import { AppComponent } from "./app.component";
-import { HelloComponent } from "./hello.component";
 import { LeaderboardComponent } from "./leaderboard/leaderboard.component";
 import { LeaderboardService } from "./leaderboard.service";
 import { LeaderboardResolver } from "./leaderboard.resolver";
@@ -43,7 +42,6 @@ import { AboutComponent } from "./about/about.component";
   ],
   declarations: [
     AppComponent,
-    HelloComponent,
     LeaderboardComponent,
     StartpageComponent,
     AboutComponent

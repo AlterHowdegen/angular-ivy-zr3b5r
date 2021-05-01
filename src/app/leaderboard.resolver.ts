@@ -13,9 +13,9 @@ import { LeaderboardService } from "./leaderboard.service";
   providedIn: "root"
 })
 export class LeaderboardResolver implements Resolve<any> {
-  // url = "https://schildmaid.herokuapp.com/api/highscores?gameMode=1";
+  url = "https://schildmaid.herokuapp.com/api/highscores?gameMode=1";
 
-  url = "http://localhost:3000/api/highscores?gameMode=1";
+  //url = "http://localhost:3000/api/highscores?gameMode=1";
 
   constructor(private service: LeaderboardService) {}
 
