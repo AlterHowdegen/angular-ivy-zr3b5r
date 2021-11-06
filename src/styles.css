@@ -1,7 +1,10 @@
 /* Add application styles & imports to this file! */
 
 h1 {
-  color: blue;
+  text-indent: -9999px;
+  width: 600px;
+  height: 100px;
+  background: url(/assets/headerLogo.png) #cccccc00 no-repeat;
 }
 
 .storeBadge {
